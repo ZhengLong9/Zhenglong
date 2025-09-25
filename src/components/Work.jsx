@@ -3,7 +3,7 @@ import ProjectCard from './ProjectCard';
 
 const works = [
   {
-    imgSrc: '/images/project-1.png',
+    imgSrc: 'images/project-1.png',
     title: 'UX Research - JDS Badminton (WIP)',
     tags: ['User Experience'],
     projectLink: 'https://docs.google.com/document/d/1UDpA7b-pvg7R_SFwiqjoS9hD7suid_Gy/edit?usp=sharing&ouid=105729160574253298274&rtpof=true&sd=true'

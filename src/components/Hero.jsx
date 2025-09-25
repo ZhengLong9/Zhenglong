@@ -8,7 +8,7 @@ const Hero = () => {
             <div>
                 <div className="flex items-center gap-3">
                     <figure className="img-box w-9 h-9 rounded-lg">
-                        <img src="/images/avatar-1.png" width={40} height={40} alt="Portrait of me" className='image-cover'/>
+                        <img src="images/avatar-1.png" width={40} height={40} alt="Portrait of me" className='image-cover'/>
                     </figure>
                     <div className="flex items-center gap-1.5 text-zinc-400 text-sm tracking-wide">
                         <span className="relative w-2 h-2 rounded-full bg-emerald-400">
