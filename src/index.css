@@ -29,7 +29,7 @@ html {
   }
 
   .nav-link.active {
-    @apply text-zinc-900 duration-500;
+    @apply text-zinc-900 duration-500; 
   }
 
   .navbar .active-box {
