@@ -107,29 +107,31 @@ const Navbar = ({ navOpen }) => {
     };
   }, []);
 
-  const navItems = [
-    { label: "Home", link: "#home" },
-    { label: "About", link: "#about" },
-    { label: "Work", link: "#work" },
-    { label: "Contact", link: "#contact" },
-  ];
 
-  return (
-    <nav className={"navbar " + (navOpen ? "active" : "")}>
-      {navItems.map(({ label, link }, i) => (
-        <a
-          href={link}
-          key={link}
-          ref={(el) => (navLinks.current[i] = el)}
-          className="nav-link"
-          onClick={(e) => setActiveLink(e.currentTarget)}
-        >
-          {label}
-        </a>
-      ))}
-      <div className="active-box" ref={activeBox} />
-    </nav>
-  );
+  const navItems = [
+  { label: "Home", link: "#home" },
+  { label: "About", link: "#about" },
+  { label: "Work", link: "#work" },
+  { label: "Contact", link: "#contact", className: "md:hidden" }, 
+];
+
+return (
+  <nav className={"navbar " + (navOpen ? "active" : "")}>
+    {navItems.map(({ label, link, className = "" }, i) => (
+      <a
+        href={link}
+        key={link}
+        ref={(el) => (navLinks.current[i] = el)}
+        className={`nav-link ${className}`}
+        onClick={(e) => setActiveLink(e.currentTarget)}
+      >
+        {label}
+      </a>
+    ))}
+    <div className="active-box" ref={activeBox} />
+  </nav>
+);
+
 };
 
 Navbar.propTypes = { navOpen: PropTypes.bool.isRequired };
